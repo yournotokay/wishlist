@@ -21,11 +21,14 @@ var _ = BeforeSuite(func() {
   // Choose a WebDriver
 
   agoutiDriver, err = PhantomJS()
-  // agoutiDriver, err = Selenium():q
+  // agoutiDriver, err = Selenium()
   // agoutiDriver, err = Chrome()
 
   Expect(err).NotTo(HaveOccurred())
   Expect(agoutiDriver.Start()).To(Succeed())
+
+  
+    StartMyApp(port)
 })
 
 var _ = AfterSuite(func() {

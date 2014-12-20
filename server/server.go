@@ -14,7 +14,3 @@ func StartMyApp(port int) {
   http.HandleFunc("/", handler)
   http.ListenAndServe(fmt.Sprintf(":%v",port), nil)
 }
-
-func main() {
-  StartMyApp(3000)
-}
